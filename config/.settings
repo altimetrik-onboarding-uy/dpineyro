@@ -1,0 +1,26 @@
+{
+    "projectName": "Onboarding Project DPineyro",
+    "username": "dpineyro.onboarding@altimetrik.com",
+    "id": "8e8a9b80-3cd1-11e8-92d8-6997122f1aaa",
+    "namespace": "",
+    "orgType": "developer",
+    "loginUrl": "https://login.salesforce.com/",
+    "instanceUrl": "https://na59.salesforce.com",
+    "workspace": "C:\\Users\\dpineyro\\Documents",
+    "subscription": [
+        "ApexClass",
+        "ApexComponent",
+        "ApexPage",
+        "ApexTrigger",
+        "CustomApplication",
+        "CustomObject",
+        "CustomTab",
+        "EmailTemplate",
+        "FlexiPage",
+        "HomePageComponent",
+        "HomePageLayout",
+        "Layout",
+        "StaticResource",
+        "Workflow"
+    ]
+}
