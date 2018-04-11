@@ -1,0 +1,91 @@
+42.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: 
+Execute Anonymous: Test_Case__c a = new Test_Case__c(Name = 'Test 2',Title__c = 'El Title');
+Execute Anonymous: insert a;
+16:32:59.1 (1248474)|USER_INFO|[EXTERNAL]|005f4000001eieE|dpineyro.onboarding@altimetrik.com|Hora de Argentina|GMT-03:00
+16:32:59.1 (1282096)|EXECUTION_STARTED
+16:32:59.1 (1290420)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+16:32:59.1 (1486351)|VARIABLE_SCOPE_BEGIN|[2]|a|Test_Case__c|true|false
+16:32:59.1 (1622829)|HEAP_ALLOCATE|[72]|Bytes:3
+16:32:59.1 (1662440)|HEAP_ALLOCATE|[77]|Bytes:152
+16:32:59.1 (1684469)|HEAP_ALLOCATE|[342]|Bytes:408
+16:32:59.1 (1705825)|HEAP_ALLOCATE|[355]|Bytes:408
+16:32:59.1 (1726112)|HEAP_ALLOCATE|[467]|Bytes:48
+16:32:59.1 (1761699)|HEAP_ALLOCATE|[139]|Bytes:6
+16:32:59.1 (1789113)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+16:32:59.1 (1929876)|STATEMENT_EXECUTE|[1]
+16:32:59.1 (1934529)|STATEMENT_EXECUTE|[2]
+16:32:59.1 (1972670)|HEAP_ALLOCATE|[2]|Bytes:4
+16:32:59.1 (2076383)|HEAP_ALLOCATE|[2]|Bytes:6
+16:32:59.1 (2148638)|VARIABLE_ASSIGNMENT|[2]|this.Name|"Test 2"|0x4ca82c26
+16:32:59.1 (2163701)|HEAP_ALLOCATE|[2]|Bytes:8
+16:32:59.1 (2218076)|VARIABLE_ASSIGNMENT|[2]|this.Title__c|"El Title"|0x4ca82c26
+16:32:59.1 (2269972)|VARIABLE_ASSIGNMENT|[2]|a|{"Name":"Test 2","Title__c":"El Title"}|0x4ca82c26
+16:32:59.1 (2283398)|STATEMENT_EXECUTE|[3]
+16:32:59.1 (2330696)|HEAP_ALLOCATE|[50]|Bytes:5
+16:32:59.1 (2356849)|HEAP_ALLOCATE|[56]|Bytes:5
+16:32:59.1 (2370192)|HEAP_ALLOCATE|[64]|Bytes:7
+16:32:59.1 (2425664)|HEAP_ALLOCATE|[3]|Bytes:8
+16:32:59.1 (2443294)|DML_BEGIN|[3]|Op:Insert|Type:Test_Case__c|Rows:1
+16:32:59.1 (2511748)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+16:32:59.1 (21446953)|CODE_UNIT_STARTED|[EXTERNAL]|01qf4000000Nply|insertTestCase on Test_Case trigger event BeforeInsert
+16:32:59.1 (21500325)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+16:32:59.1 (21638300)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:3
+16:32:59.1 (21664056)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:32:59.1 (21678471)|VARIABLE_SCOPE_BEGIN|[1]|this|insertTestCase|true|false
+16:32:59.1 (21723611)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x2380d1f8
+16:32:59.1 (21809007)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:32:59.1 (21851717)|VARIABLE_SCOPE_BEGIN|[1]|this|insertTestCase|true|false
+16:32:59.1 (21877815)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x2380d1f8
+16:32:59.1 (21890511)|STATEMENT_EXECUTE|[1]
+16:32:59.1 (21893490)|STATEMENT_EXECUTE|[2]
+16:32:59.1 (21899324)|HEAP_ALLOCATE|[2]|Bytes:9
+16:32:59.1 (21964649)|USER_DEBUG|[2]|DEBUG|message 0
+16:32:59.1 (21984617)|STATEMENT_EXECUTE|[3]
+16:32:59.1 (21987844)|STATEMENT_EXECUTE|[4]
+16:32:59.1 (21992355)|HEAP_ALLOCATE|[4]|Bytes:9
+16:32:59.1 (22013500)|USER_DEBUG|[4]|DEBUG|message 1
+16:32:59.22 (22031474)|CUMULATIVE_LIMIT_USAGE
+16:32:59.22 (22031474)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+16:32:59.22 (22031474)|CUMULATIVE_LIMIT_USAGE_END
+
+16:32:59.1 (23052315)|CODE_UNIT_FINISHED|insertTestCase on Test_Case trigger event BeforeInsert
+16:32:59.1 (26188744)|DML_END|[3]
+16:32:59.1 (26584680)|VF_PAGE_MESSAGE|Required fields are missing: [Project__c]
+16:32:59.1 (26696154)|EXCEPTION_THROWN|[3]|System.DmlException: Insert failed. First exception on row 0; first error: REQUIRED_FIELD_MISSING, Required fields are missing: [Project__c]: [Project__c]
+16:32:59.1 (27013659)|HEAP_ALLOCATE|[3]|Bytes:137
+16:32:59.1 (27133094)|FATAL_ERROR|System.DmlException: Insert failed. First exception on row 0; first error: REQUIRED_FIELD_MISSING, Required fields are missing: [Project__c]: [Project__c]
+
+AnonymousBlock: line 3, column 1
+16:32:59.27 (27149794)|CUMULATIVE_LIMIT_USAGE
+16:32:59.27 (27149794)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+16:32:59.27 (27149794)|CUMULATIVE_LIMIT_USAGE_END
+
+16:32:59.1 (27179672)|CODE_UNIT_FINISHED|execute_anonymous_apex
+16:32:59.1 (28012259)|EXECUTION_FINISHED

@@ -1,0 +1,94 @@
+42.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: Project__c p = [SELECT Name,Status__c FROM Project__c WHERE Name = 'Onboarding'];
+Execute Anonymous: Test_Case__c a = new Test_Case__c(Name = 'Test 2',Title__c = 'El Title', Project__c = p.Id);
+Execute Anonymous: insert a;
+17:01:39.1 (1147005)|USER_INFO|[EXTERNAL]|005f4000001eieE|dpineyro.onboarding@altimetrik.com|Hora de Argentina|GMT-03:00
+17:01:39.1 (1165267)|EXECUTION_STARTED
+17:01:39.1 (1169558)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+17:01:39.1 (1306868)|VARIABLE_SCOPE_BEGIN|[2]|a|Test_Case__c|true|false
+17:01:39.1 (1332403)|VARIABLE_SCOPE_BEGIN|[1]|p|Project__c|true|false
+17:01:39.1 (1442163)|HEAP_ALLOCATE|[72]|Bytes:3
+17:01:39.1 (1475152)|HEAP_ALLOCATE|[77]|Bytes:152
+17:01:39.1 (1489482)|HEAP_ALLOCATE|[342]|Bytes:408
+17:01:39.1 (1502574)|HEAP_ALLOCATE|[355]|Bytes:408
+17:01:39.1 (1513251)|HEAP_ALLOCATE|[467]|Bytes:48
+17:01:39.1 (1540773)|HEAP_ALLOCATE|[139]|Bytes:6
+17:01:39.1 (1556119)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+17:01:39.1 (1699716)|STATEMENT_EXECUTE|[1]
+17:01:39.1 (1702686)|STATEMENT_EXECUTE|[1]
+17:01:39.1 (1706042)|HEAP_ALLOCATE|[1]|Bytes:64
+17:01:39.1 (1725711)|HEAP_ALLOCATE|[1]|Bytes:4
+17:01:39.1 (1763710)|HEAP_ALLOCATE|[50]|Bytes:5
+17:01:39.1 (1784896)|HEAP_ALLOCATE|[56]|Bytes:5
+17:01:39.1 (1792241)|HEAP_ALLOCATE|[64]|Bytes:7
+17:01:39.1 (1983861)|SOQL_EXECUTE_BEGIN|[1]|Aggregations:0|SELECT Name, Status__c FROM Project__c WHERE Name = 'Onboarding'
+17:01:39.1 (15786671)|SOQL_EXECUTE_END|[1]|Rows:1
+17:01:39.1 (15814645)|HEAP_ALLOCATE|[1]|Bytes:8
+17:01:39.1 (15830168)|HEAP_ALLOCATE|[1]|Bytes:67
+17:01:39.1 (15920905)|HEAP_ALLOCATE|[1]|Bytes:8
+17:01:39.1 (15935658)|HEAP_ALLOCATE|[1]|Bytes:36
+17:01:39.1 (15987031)|HEAP_ALLOCATE|[1]|Bytes:16
+17:01:39.1 (16035402)|VARIABLE_ASSIGNMENT|[1]|p|{"Name":"Onboarding","Status__c":"Ongoing","Id":"a00f4000006OdBEAA0"}|0x7ec1b621
+17:01:39.1 (16045529)|STATEMENT_EXECUTE|[2]
+17:01:39.1 (16068155)|HEAP_ALLOCATE|[2]|Bytes:4
+17:01:39.1 (16145379)|HEAP_ALLOCATE|[2]|Bytes:6
+17:01:39.1 (16181927)|VARIABLE_ASSIGNMENT|[2]|this.Name|"Test 2"|0x213568b2
+17:01:39.1 (16188868)|HEAP_ALLOCATE|[2]|Bytes:8
+17:01:39.1 (16227754)|VARIABLE_ASSIGNMENT|[2]|this.Title__c|"El Title"|0x213568b2
+17:01:39.1 (16275393)|VARIABLE_ASSIGNMENT|[2]|this.Project__c|"a00f4000006OdBEAA0"|0x213568b2
+17:01:39.1 (16315986)|VARIABLE_ASSIGNMENT|[2]|a|{"Name":"Test 2","Title__c":"El Title","Project__c":"a00f4000006OdBEAA0"}|0x213568b2
+17:01:39.1 (16322450)|STATEMENT_EXECUTE|[3]
+17:01:39.1 (16345707)|HEAP_ALLOCATE|[3]|Bytes:8
+17:01:39.1 (16357034)|DML_BEGIN|[3]|Op:Insert|Type:Test_Case__c|Rows:1
+17:01:39.1 (16386972)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:01:39.1 (20852324)|CODE_UNIT_STARTED|[EXTERNAL]|01qf4000000Nply|insertTestCase on Test_Case trigger event BeforeInsert
+17:01:39.1 (20889603)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:01:39.1 (20986081)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+17:01:39.1 (21002230)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:01:39.1 (21011644)|VARIABLE_SCOPE_BEGIN|[1]|this|insertTestCase|true|false
+17:01:39.1 (21040323)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x78e44088
+17:01:39.1 (21091715)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+17:01:39.1 (21098006)|VARIABLE_SCOPE_BEGIN|[1]|this|insertTestCase|true|false
+17:01:39.1 (21110043)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x78e44088
+17:01:39.1 (21116641)|STATEMENT_EXECUTE|[1]
+17:01:39.1 (21118565)|STATEMENT_EXECUTE|[2]
+17:01:39.1 (21122012)|HEAP_ALLOCATE|[2]|Bytes:9
+17:01:39.1 (21163410)|USER_DEBUG|[2]|DEBUG|message 0
+17:01:39.21 (21177542)|CUMULATIVE_LIMIT_USAGE
+17:01:39.21 (21177542)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:01:39.21 (21177542)|CUMULATIVE_LIMIT_USAGE_END
+
+17:01:39.1 (21941093)|CODE_UNIT_FINISHED|insertTestCase on Test_Case trigger event BeforeInsert
+17:01:39.1 (43909943)|DML_END|[3]
+17:01:39.46 (46046725)|CUMULATIVE_LIMIT_USAGE
+17:01:39.46 (46046725)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:01:39.46 (46046725)|CUMULATIVE_LIMIT_USAGE_END
+
+17:01:39.1 (46087520)|CODE_UNIT_FINISHED|execute_anonymous_apex
+17:01:39.1 (46883439)|EXECUTION_FINISHED

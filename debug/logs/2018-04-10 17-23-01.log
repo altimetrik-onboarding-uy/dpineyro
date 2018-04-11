@@ -1,0 +1,86 @@
+42.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: Project__c p = [SELECT Name,Status__c FROM Project__c WHERE Name = 'Onboarding'];
+Execute Anonymous: Test_Case__c a = new Test_Case__c(Name = 'Test 2',Title__c = 'El Title', Project__c = p.Id);
+Execute Anonymous: insert a;
+17:23:00.1 (1241934)|USER_INFO|[EXTERNAL]|005f4000001eieE|dpineyro.onboarding@altimetrik.com|Hora de Argentina|GMT-03:00
+17:23:00.1 (1281367)|EXECUTION_STARTED
+17:23:00.1 (1289153)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+17:23:00.1 (1461355)|VARIABLE_SCOPE_BEGIN|[2]|a|Test_Case__c|true|false
+17:23:00.1 (1510668)|VARIABLE_SCOPE_BEGIN|[1]|p|Project__c|true|false
+17:23:00.1 (1648102)|HEAP_ALLOCATE|[72]|Bytes:3
+17:23:00.1 (1688586)|HEAP_ALLOCATE|[77]|Bytes:152
+17:23:00.1 (1707902)|HEAP_ALLOCATE|[342]|Bytes:408
+17:23:00.1 (1727436)|HEAP_ALLOCATE|[355]|Bytes:408
+17:23:00.1 (1747000)|HEAP_ALLOCATE|[467]|Bytes:48
+17:23:00.1 (1779250)|HEAP_ALLOCATE|[139]|Bytes:6
+17:23:00.1 (1804303)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+17:23:00.1 (1909739)|STATEMENT_EXECUTE|[1]
+17:23:00.1 (1914528)|STATEMENT_EXECUTE|[1]
+17:23:00.1 (1919354)|HEAP_ALLOCATE|[1]|Bytes:64
+17:23:00.1 (1940321)|HEAP_ALLOCATE|[1]|Bytes:4
+17:23:00.1 (1984528)|HEAP_ALLOCATE|[50]|Bytes:5
+17:23:00.1 (2009518)|HEAP_ALLOCATE|[56]|Bytes:5
+17:23:00.1 (2024067)|HEAP_ALLOCATE|[64]|Bytes:7
+17:23:00.1 (2331116)|SOQL_EXECUTE_BEGIN|[1]|Aggregations:0|SELECT Name, Status__c FROM Project__c WHERE Name = 'Onboarding'
+17:23:00.1 (7405443)|SOQL_EXECUTE_END|[1]|Rows:1
+17:23:00.1 (7443423)|HEAP_ALLOCATE|[1]|Bytes:8
+17:23:00.1 (7460628)|HEAP_ALLOCATE|[1]|Bytes:67
+17:23:00.1 (7553320)|HEAP_ALLOCATE|[1]|Bytes:8
+17:23:00.1 (7573904)|HEAP_ALLOCATE|[1]|Bytes:36
+17:23:00.1 (7613422)|HEAP_ALLOCATE|[1]|Bytes:16
+17:23:00.1 (7675165)|VARIABLE_ASSIGNMENT|[1]|p|{"Name":"Onboarding","Status__c":"Ongoing","Id":"a00f4000006OdBEAA0"}|0x383801e5
+17:23:00.1 (7686309)|STATEMENT_EXECUTE|[2]
+17:23:00.1 (7723484)|HEAP_ALLOCATE|[2]|Bytes:4
+17:23:00.1 (7833067)|HEAP_ALLOCATE|[2]|Bytes:6
+17:23:00.1 (7884686)|VARIABLE_ASSIGNMENT|[2]|this.Name|"Test 2"|0x5016d9ac
+17:23:00.1 (7900772)|HEAP_ALLOCATE|[2]|Bytes:8
+17:23:00.1 (7955343)|VARIABLE_ASSIGNMENT|[2]|this.Title__c|"El Title"|0x5016d9ac
+17:23:00.1 (8027011)|VARIABLE_ASSIGNMENT|[2]|this.Project__c|"a00f4000006OdBEAA0"|0x5016d9ac
+17:23:00.1 (8074223)|VARIABLE_ASSIGNMENT|[2]|a|{"Name":"Test 2","Title__c":"El Title","Project__c":"a00f4000006OdBEAA0"}|0x5016d9ac
+17:23:00.1 (8082609)|STATEMENT_EXECUTE|[3]
+17:23:00.1 (8119006)|HEAP_ALLOCATE|[3]|Bytes:8
+17:23:00.1 (8136057)|DML_BEGIN|[3]|Op:Insert|Type:Test_Case__c|Rows:1
+17:23:00.1 (8176206)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:23:00.1 (26149072)|CODE_UNIT_STARTED|[EXTERNAL]|01qf4000000Nply|insertTestCase on Test_Case trigger event BeforeInsert
+17:23:00.1 (26225719)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:23:00.1 (26400174)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+17:23:00.1 (26470520)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:23:00.1 (26493136)|VARIABLE_SCOPE_BEGIN|[1]|this|insertTestCase|true|false
+17:23:00.1 (26567257)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x28afa44e
+17:23:00.1 (26681235)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:23:00.1 (26748045)|VARIABLE_SCOPE_BEGIN|[1]|this|insertTestCase|true|false
+17:23:00.1 (26785440)|VARIABLE_ASSIGNMENT|[1]|this|{}|0x28afa44e
+17:23:00.1 (26803335)|STATEMENT_EXECUTE|[1]
+17:23:00.1 (26807926)|STATEMENT_EXECUTE|[2]
+17:23:00.1 (26850508)|HEAP_ALLOCATE|[2]|Bytes:4
+17:23:00.1 (27045159)|HEAP_ALLOCATE|[2]|Bytes:4
+17:23:00.1 (27063982)|HEAP_ALLOCATE|[2]|Bytes:4
+17:23:00.1 (27074830)|HEAP_ALLOCATE|[2]|Bytes:4
+17:23:00.1 (27121779)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:8
+17:23:00.1 (27714865)|VARIABLE_ASSIGNMENT|[2]|this.c|[{"IsDeleted":false,"OwnerId":"005f4000001eieEAAQ","Project__c":"a00f4000006OdBEAA0","Name":"Test 2","Title__c":"El Title"}]|0x28afa44e
+17:23:00.1 (27733419)|STATEMENT_EXECUTE|[3]
+17:23:00.1 (27881324)|HEAP_ALLOCATE|[3]|Bytes:31
+17:23:00.1 (28105025)|FATAL_ERROR|System.ListException: List index out of bounds: 5
+
+Trigger.insertTestCase: line 3, column 1
+17:23:00.1 (28133123)|FATAL_ERROR|System.ListException: List index out of bounds: 5
+
+Trigger.insertTestCase: line 3, column 1
+17:23:00.28 (28214710)|CUMULATIVE_LIMIT_USAGE
+17:23:00.28 (28214710)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 1 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+17:23:00.28 (28214710)|CUMULATIVE_LIMIT_USAGE_END
+
+17:23:00.1 (29092428)|CODE_UNIT_FINISHED|insertTestCase on Test_Case trigger event BeforeInsert
