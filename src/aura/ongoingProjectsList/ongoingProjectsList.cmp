@@ -1,6 +1,7 @@
 <aura:component controller="ProjectOngoing">
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
     <aura:handler name="projectDetailsEvent" event="c:projectDetailsEvent" action="{!c.loadDetails}" />
+    <aura:handler name="deleteItemEvent" event="c:deleteItemEvent" action="{!c.deleteItem}" />
     <aura:attribute name="projectongoing" type="Project__c[]" />
     <aura:attribute type="Map" name="selectedProject" />
     

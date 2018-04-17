@@ -19,7 +19,6 @@
     loadDetails: function(component,event,helper){
         var projectDetails = event.getParam("paramDet");
         var action = component.get("c.getProjectOngoingDetails");
-        console.log("Este "+projectDetails);
         action.setParams({
             "myId": projectDetails.Id
         });
@@ -37,5 +36,16 @@
         // Send action off to be executed
         $A.enqueueAction(action);
     },
+    deleteItem: function(component,event,helper){
+        console.log("He shot me!");
+        var deleteItem = event.getParam("parDelete");
+        var action = component.get("c.deleteTest");
+        console.log('## ',JSON.parse(JSON.stringify(deleteItem)));
+        action.setParams({
+            "myId": deleteItem.Id
+        });
+        console.log("Here I am")
+        $A.enqueueAction(action);
+    }
 
 })
