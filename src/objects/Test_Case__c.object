@@ -91,13 +91,13 @@
     </fields>
     <fields>
         <fullName>nameProject__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
         <label>Project</label>
         <referenceTo>Project__c</referenceTo>
         <relationshipLabel>Test Cases</relationshipLabel>
         <relationshipName>Test_Cases</relationshipName>
-        <required>false</required>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>

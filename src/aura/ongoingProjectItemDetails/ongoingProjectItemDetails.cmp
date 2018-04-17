@@ -1,0 +1,109 @@
+<aura:component >
+	<aura:attribute name="projectFilterItem" Type="Project__c"/>
+    <div class="demo-only" style="height: 640px; display:none;">
+      <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open"
+               style="
+                      background-color: #726d6d;
+                      opacity: 0.7;
+                      ">
+        <div class="slds-modal__container">
+          <header class="slds-modal__header">
+            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+              X
+              <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!v.projectFilterItem.Name}</h2>
+          </header>
+                <div class="slds-box"
+                     style="
+                            padding: 1rem;
+                            border-radius: .25rem;
+                            background-color: #5c6188;
+                            ">
+                    <div class="slds-col slds-size_2-of-4" 
+                         style="
+                                height: auto;
+                                max-width: 520px;
+                                background: rgb(255, 255, 255);
+                                padding: 1rem;
+                                border-radius: 10px;
+                                box-shadow: 0px 0px 20px 0px #605e5e;
+                                opacity: 5;
+                                ">
+                        <div class="slds-panel__section">
+                            <h3 class="slds-text-heading_small slds-m-bottom_medium">Details of Project</h3>
+                            <ul>
+                                <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Id</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Id}</span>
+                                </div>
+                              </li>
+                              <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Title</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Title__c}</span>
+                                </div>
+                              </li>
+                              <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Name</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Name}</span>
+                                </div>
+                              </li>
+                              <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Status</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Status__c}</span>
+                                </div>
+                              </li>
+                              <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Owner</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Owner__c}</span>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+    			</div>
+      		</div>
+        </section>
+    </div>
+    <!--<div class="slds-panel__section" onclick="{!c.clickDetails}" style="height: 845px; max-width: 420px; background: rgb(244, 246, 249); padding: 1rem;">
+        <legend id="newexpenseform" class="slds-text-heading_small slds-m-bottom_medium">
+          Details : Project Ongoing
+        </legend>
+        <div class="">
+        	<div class="slds-col slds-size_2-of-4">
+            	<table>
+                	<tbody>
+                    	<td class="slds-text-align_left">
+                        	<tr scope="row"><span class="slds-text-heading_large ">Id</span></tr>
+                        	<tr scope="row"><span class="slds-text-heading_large ">Title</span></tr>
+                        	<tr scope="row"><span class="slds-text-heading_large ">Name</span></tr>
+                        	<tr scope="row"><span class="slds-text-heading_large ">Status</span></tr>
+                        	<tr scope="row"><span class="slds-text-heading_large ">Owner</span></tr>
+                    	</td>
+                    	<td class="slds-text-align_center">
+                            <tr scope="row"><span class="slds-text-heading_large ">:</span></tr>
+                            <tr scope="row"><span class="slds-text-heading_large">:</span></tr>
+                            <tr scope="row"><span class="slds-text-heading_large">:</span></tr>
+                            <tr scope="row"><span class="slds-text-heading_large ">:</span></tr>
+                            <tr scope="row"><span class="slds-text-heading_large ">:</span></tr>
+                    	</td>
+                    	<td class="slds-text-align_left slds-float_left">
+                            <tr><span class="slds-text-heading_large ">{!v.projectItem.Id}</span></tr>
+                            <tr><span class="slds-text-heading_large ">{!v.projectItem.Title__c}</span></tr>
+                            <tr><span class="slds-text-heading_large ">{!v.projectItem.Name}</span></tr>
+                            <tr><span class="slds-text-heading_large ">{!v.projectItem.Status__c}</span></tr>
+                            <tr><span class="slds-text-heading_large ">{!v.projectItem.Owner__c}</span></tr>
+                        </td>
+                	</tbody>
+            	</table>
+        	</div>
+            <div class="slds-col slds-size_2-of-4">
+            </div>
+    	</div>
+    </div>-->
+</aura:component>

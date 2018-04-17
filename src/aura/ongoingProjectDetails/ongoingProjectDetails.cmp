@@ -1,0 +1,50 @@
+<aura:component controller="ProjectOngoing">
+    <!--<aura:handler event="c:projectDetailsEvent"  action="{!c.loadDetails}" />-->
+    <aura:attribute name="projectFilterItem" Type="Project__c" />
+    <!--<aura:attribute name="TestCaseItem" Type="Test_Case__c" />-->
+   <div aura:id="modal">
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!v.projectFilterItem.Name}</h2>
+                <div class="myboxs slds-col slds-size_12-of-12">
+                    <div class="myPanel slds-col slds-size_6-of-12" >
+                        <div class="slds-panel__section">
+                            <h3 class="slds-text-heading_small slds-m-bottom_medium">Details of Project</h3>
+                            <ul>
+                                <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Id</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Id}</span>
+                                </div>
+                              </li>
+                              <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Title</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Title__c}</span>
+                                </div>
+                              </li>
+                              <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Name</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Name}</span>
+                                </div>
+                              </li>
+                              <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Status</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Status__c}</span>
+                                </div>
+                              </li>
+                              <li class="slds-form-element slds-hint-parent slds-border_bottom">
+                                <span class="slds-form-element__label">Owner</span>
+                                <div class="slds-form-element__control">
+                                  <span class="slds-form-element__static">{!v.projectFilterItem.Owner__c}</span>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="myPanel slds-col slds-size_6-of-12" >
+                        <c:projectTestCaseList testCaseList="{!v.projectFilterItem.Test_Cases__r}"/>
+                    </div>
+    			</div>
+      		</div>
+</aura:component>

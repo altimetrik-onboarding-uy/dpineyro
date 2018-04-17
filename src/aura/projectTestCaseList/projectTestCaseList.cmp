@@ -1,0 +1,8 @@
+<aura:component controller="ProjectOngoing">
+    <aura:attribute name="testCaseList" Type="Test_Case__c[]" />
+	<ul>
+        <aura:iteration items="{!v.testCaseList}" var="itm">
+            <c:projectTestCaseItem testCaseItem="{!itm}"/>
+        </aura:iteration>
+    </ul>
+</aura:component>
