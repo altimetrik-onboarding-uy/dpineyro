@@ -4,16 +4,23 @@
     <aura:handler name="deleteItemEvent" event="c:deleteItemEvent" action="{!c.deleteItem}" />
     <aura:attribute name="projectongoing" type="Project__c[]" />
     <aura:attribute type="Map" name="selectedProject" />
-    
-    <div class="myPanel slds-col slds-size_5-of-12" >
+    <div class="myPanel slds-col slds-size_12-of-12" >
+    <div class="myPanel slds-col slds-size_4-of-12" >
+    <legend id="newform" class="slds-text-heading_large slds-text-align_center">
+        Status : <br />
+        Project Ongoing
+    </legend>
     <aura:iteration items="{!v.projectongoing}" var="projectItem">
         <c:ongoingProjectItem projectItem="{!projectItem}" />    
     </aura:iteration>
     </div>
     <!-- Auraif on selectedProject-->
     <aura:if isTrue="{!v.selectedProject != null}" >
-    <div class="myPanel slds-col slds-size_5-of-12" >
-        <c:ongoingProjectDetails projectFilterItem="{!v.selectedProject}"  />
+    <div class="myPanel slds-col slds-size_8-of-12" >
+        <div class="projectsLists">
+        <c:ongoingProjectDetails projectFilterItem="{!v.selectedProject}" />
+        </div>
     </div>
     </aura:if>
+    </div>
 </aura:component>

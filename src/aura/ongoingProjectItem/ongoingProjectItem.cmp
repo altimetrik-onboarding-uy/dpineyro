@@ -6,15 +6,13 @@
     <!--attributes-->
     <aura:attribute name="projectItem" Type="Project__c" />
 	
-    <fieldset style="margin: 2% auto;" class="mybox slds-box slds-theme--default slds-container--small slds-m-left_xx-large" 
+    <fieldset class="mybox slds-box slds-theme--default slds-container--small slds-m-left_xx-large" 
               onclick="{!c.clickDetails}"  >
         <div class="card-box">
-        <legend id="newform" class="slds-text-heading_large slds-text-align_center">
-          Status : Project Ongoing
-        </legend>
-            <br/>
-            <h2 class="slds-text-heading_large slds-text-align_center">Title	:	{!v.projectItem.Title__c}</h2>
-            <h2 class="slds-text-heading_large slds-text-align_center">Name	:	{!v.projectItem.Name}</h2>
+            <h2 class="slds-text-heading_medium slds-text-align_left">Title	:</h2>	
+            <h2 class="slds-text-heading_small slds-text-align_left">{!v.projectItem.Title__c}</h2>
+            <h2 class="slds-text-heading_medium slds-text-align_left">Name	:</h2>	
+            <h2 class="slds-text-heading_small slds-text-align_left">{!v.projectItem.Name}</h2>
        </div>
     </fieldset>
 </aura:component>

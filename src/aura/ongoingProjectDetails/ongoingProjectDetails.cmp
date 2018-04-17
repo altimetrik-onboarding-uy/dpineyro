@@ -3,12 +3,12 @@
     <aura:attribute name="projectFilterItem" Type="Project__c" />
     <!--<aura:attribute name="TestCaseItem" Type="Test_Case__c" />-->
    <div aura:id="modal">
-            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!v.projectFilterItem.Name}</h2>
-                <div class="myboxs slds-col slds-size_12-of-12">
-                    <div class="myPanel slds-col slds-size_6-of-12" >
+            <h2 class="slds-text-heading_large slds-text-align_center">{!v.projectFilterItem.Name}</h2>
+                <div class="">
+                    <div class="" >
                         <div class="slds-panel__section">
-                            <h3 class="slds-text-heading_small slds-m-bottom_medium">Details of Project</h3>
                             <ul>
+                              <h1 class="slds-text-heading_small slds-m-bottom_medium">Details of Project</h1>
                                 <li class="slds-form-element slds-hint-parent slds-border_bottom">
                                 <span class="slds-form-element__label">Id</span>
                                 <div class="slds-form-element__control">
@@ -42,7 +42,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="myPanel slds-col slds-size_6-of-12" >
+                    <div class="" >
                         <c:projectTestCaseList testCaseList="{!v.projectFilterItem.Test_Cases__r}"/>
                     </div>
     			</div>

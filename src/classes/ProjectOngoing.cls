@@ -10,7 +10,10 @@ public	with sharing class ProjectOngoing {
     public static Project__c getProjectOngoingDetails(String myId){
         Project__c ret = [SELECT Project__c.Id, Project__c.Title__c, Project__c.Name, Project__c.Owner__c, Project__c.Status__c,
                               (
-                                SELECT Test_Case__c.Id,Test_Case__c.Title__c,Test_Case__c.nameProject__c 
+                                SELECT Test_Case__c.Id,
+                                Test_Case__c.Title__c,
+                                Name,
+                                Test_Case__c.nameProject__c
                                 FROM Test_Cases__r
                               )
                             FROM Project__c
