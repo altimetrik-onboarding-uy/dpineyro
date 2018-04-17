@@ -21,6 +21,27 @@ public	with sharing class ProjectOngoing {
         System.debug(ret);
         return ret;
     }
+
+    @AuraEnabled
+    public static Map<Id, Test_Case__c> getProjectOngoingDetails1(String myId){
+        List<Test_Case__c> testCases = [SELECT  Id, 
+                                                Title__c, 
+                                                Name, 
+                                                nameProject__c,  
+                                                nameProject__r.Id, 
+                                                nameProject__r.Title__c,
+                                                nameProject__r.Name, 
+                                                nameProject__r.Owner__c, 
+                                                nameProject__r.Status__c 
+                                                FROM Test_Case__c 
+                                                WHERE nameProject__r.Id = :myId 
+                                                AND nameProject__r.Status__c = 'Ongoing'];
+        Map<Id, Test_Case__c> testCaseMap = new Map<Id, Test_Case__c>();
+        for(Test_Case__c t : testCases){
+            testCaseMap.put(t.Id , t);
+        }
+        return testCaseMap;
+    }
     @AuraEnabled
     public static List<Test_Case__c> getTestCaseByProject(String myId){
         List<Test_Case__c> ret = [SELECT Id,Name, nameProject__c, Title__c FROM Test_Case__c  WHERE nameProject__c = :myId ORDER BY Name DESC];

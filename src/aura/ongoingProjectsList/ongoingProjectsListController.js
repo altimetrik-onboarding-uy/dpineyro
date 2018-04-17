@@ -17,12 +17,13 @@
         $A.enqueueAction(action);
     },
     loadDetails: function(component,event,helper){
+        console.log(":S");
         var projectDetails = event.getParam("paramDet");
         var action = component.get("c.getProjectOngoingDetails");
         action.setParams({
             "myId": projectDetails.Id
         });
-        console.log('##', JSON.parse(JSON.stringify(projectDetails)));
+        console.log('#?#', JSON.parse(JSON.stringify(projectDetails)));
         
         action.setCallback(this, function(response) {
             var state = response.getState();
@@ -37,6 +38,7 @@
         $A.enqueueAction(action);
     },
     deleteItem: function(component,event,helper){
+        var listOfTc = component.get("v.selectedProject.Test_Cases__r");
         console.log("He shot me!");
         var deleteItem = event.getParam("parDelete");
         var action = component.get("c.deleteTest");
@@ -44,7 +46,18 @@
         action.setParams({
             "myId": deleteItem.Id
         });
-        console.log("Here I am")
+        console.log("Here I am");
+        var myListOfTc = new Array();
+        for(var i = 0;i<listOfTc.length;i++){
+            if(listOfTc[i].Id != deleteItem.Id){
+                myListOfTc.push(listOfTc[i]);
+            }
+            else{
+                console.log("Este fue el eliminado " + deleteItem.Id );
+            }
+        }
+        console.log('## ',JSON.parse(JSON.stringify(myListOfTc)));
+        component.set("v.selectedProject.Test_Cases__r", myListOfTc);
         $A.enqueueAction(action);
     }
 
