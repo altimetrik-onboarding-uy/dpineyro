@@ -59,4 +59,9 @@ public	with sharing class ProjectOngoing {
             System.debug('A DML Exception has ocurred : ' + e.getMessage());
         }
     }
+     @AuraEnabled 
+    public static Test_Case__c getTest(String myId){
+            Test_Case__c tes = [SELECT Id,Name,Title__c,nameProject__c,Description__c,Preconditions__c,URL__c FROM Test_Case__c WHERE Test_Case__c.Id = :myId];
+            return tes;
+    }
 }

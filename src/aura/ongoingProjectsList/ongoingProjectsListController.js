@@ -71,6 +71,30 @@
         var cmpTargetR = cmp.find('myFormUpsert');
         console.log(cmp.find('myFormUpsert'));
         $A.util.removeClass(cmpTargetR, 'myFormUpsertHide');
-    }
+    },
+	updateData: function(component,event,helper){
+        console.log("updateData");
+        var etyData = component.get("v.dataTestEty");
+        var testDetails = event.getParam("parUpsert");
+        var action = component.get("c.getTest");
+        action.setParams({
+            "myId": testDetails.Id
+        });
+        console.log('#?#', JSON.parse(JSON.stringify(testDetails)));
+        
+        action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                component.set("v.dataTest", response.getReturnValue());
+                console.log("Success");
+            }
+            else {
+                component.set("v.dataTest", etyData);
+                console.log("Failed with state: " + state);
+            }
+        }); 
+        // Send action off to be executed
+        $A.enqueueAction(action);
+	}
 
 })

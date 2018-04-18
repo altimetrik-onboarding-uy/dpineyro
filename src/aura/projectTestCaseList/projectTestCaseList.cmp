@@ -1,5 +1,6 @@
 <aura:component controller="ProjectOngoing">
     <aura:registerEvent name="showEvent" type="c:showEvent"/>
+    <aura:registerEvent name="ItemUpSert" type="c:ItemUpSert"/>
     <aura:attribute name="testCaseList" Type="Test_Case__c[]" />
     
 	<ul>

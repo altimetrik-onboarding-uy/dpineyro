@@ -1,6 +1,7 @@
 <aura:component >
     <aura:registerEvent name="deleteItemEvent" type="c:deleteItemEvent"/>
     <aura:registerEvent name="showEvent" type="c:showEvent"/>
+    <aura:registerEvent name="ItemUpSert" type="c:ItemUpSert"/>
     <aura:attribute name="testCaseItem" Type="Test_Case__c"/>
 	<article class="slds-card" >
         <div class="slds-card__header slds-grid">
