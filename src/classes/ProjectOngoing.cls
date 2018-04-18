@@ -15,9 +15,11 @@ public	with sharing class ProjectOngoing {
                                 Name,
                                 Test_Case__c.nameProject__c
                                 FROM Test_Cases__r
+                                ORDER BY LastModifiedDate DESC
                               )
                             FROM Project__c
-                            WHERE Project__c.Status__c = 'Ongoing' and Project__c.Id = :myId];
+                            WHERE Project__c.Status__c = 'Ongoing' and Project__c.Id = :myId
+                            ];
         System.debug(ret);
         return ret;
     }
