@@ -1,8 +1,9 @@
 <aura:component controller="ProjectOngoing">
+    <aura:registerEvent name="ItemUpSert" type="c:ItemUpSert"/>
     <aura:attribute name="testCaseList" Type="Test_Case__c[]" />
     
 	<ul>
-        <button type="button" class="slds-button slds-button_brand slds-m-vertical_large">New</button>
+        <button type="button" class="slds-button slds-button_brand slds-m-vertical_large" onclick="{!c.showForm}">New</button>
         <aura:if isTrue="{!v.testCaseList != null}" >
         <aura:iteration items="{!v.testCaseList}" var="itm">
             <c:projectTestCaseItem testCaseItem="{!itm}"/>

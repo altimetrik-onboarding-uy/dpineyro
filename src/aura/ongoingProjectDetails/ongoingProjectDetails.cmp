@@ -1,7 +1,5 @@
 <aura:component controller="ProjectOngoing">
-    <!--<aura:handler event="c:projectDetailsEvent"  action="{!c.loadDetails}" />-->
     <aura:attribute name="projectFilterItem" Type="Project__c" />
-    <!--<aura:attribute name="TestCaseItem" Type="Test_Case__c" />-->
    <div aura:id="modal">
    <div class="slds-grid slds-grid_vertical-align-start">
                         <div class="slds-col">

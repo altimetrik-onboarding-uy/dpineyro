@@ -20,4 +20,8 @@
         // Send action off to be executed
         $A.enqueueAction(action);
     },*/
+    showForm: function (component,event,helper){
+        var shot = component.getEvent('ItemUpSert');
+        shot.fire();
+    }
 })
