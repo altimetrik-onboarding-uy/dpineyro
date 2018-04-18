@@ -21,7 +21,7 @@
         $A.enqueueAction(action);
     },*/
     showForm: function (component,event,helper){
-        var shot = component.getEvent('ItemUpSert');
+        var shot = component.getEvent('showEvent');
         shot.fire();
     }
 })

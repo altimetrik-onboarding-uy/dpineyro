@@ -9,9 +9,9 @@
 		console.log("Fire on the hold");
 		toFire.fire();
 	},
-	formUpSert: function(component, event, helper){
+	showForm: function(component, event, helper){
 		var arrow = component.get("v.testCaseItem");
-		var throwArrow = component.getEvent('ItemUpSert');
+		var throwArrow = component.getEvent('showEvent');
 		throwArrow.setParams({
 			"parUpsert": arrow
 		});

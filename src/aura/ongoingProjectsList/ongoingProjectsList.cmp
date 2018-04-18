@@ -2,7 +2,7 @@
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
     <aura:handler name="projectDetailsEvent" event="c:projectDetailsEvent" action="{!c.loadDetails}" />
     <aura:handler name="deleteItemEvent" event="c:deleteItemEvent" action="{!c.deleteItem}" />
-    <aura:handler name="ItemUpSert" event="c:ItemUpSert" action="{!c.removeCSS}" />
+    <aura:handler name="showEvent" event="c:showEvent" action="{!c.removeCSS}" />
     <aura:handler name="hideEvent" event="c:hideEvent" action="{!c.applyCSS}" />
     <!--***********************************************************************************************-->
     <aura:attribute name="projectongoing" type="Project__c[]" />

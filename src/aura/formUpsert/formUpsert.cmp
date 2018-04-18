@@ -8,7 +8,7 @@
         <div class="slds-panel__section ">
         <div class="slds-media">
             <div class="slds-media__body">
-                <button class="slds-button slds-button_neutral slds-grow">Confirm</button>
+                <button class="slds-button slds-button_brand slds-grow">Save</button>
                 <button class="slds-button slds-button_neutral slds-grow" onclick="{!c.hideForm}">Close</button>
             </div>
         </div>
