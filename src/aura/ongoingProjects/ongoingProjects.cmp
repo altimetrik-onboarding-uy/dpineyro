@@ -1,3 +1,3 @@
 <aura:component >
-    <c:ongoingProjectsList />
+    <c:ongoingProjectsList /> 
 </aura:component>

@@ -1,0 +1,51 @@
+<aura:component >
+<aura:registerEvent name="hideEvent" type="c:hideEvent"/>
+    <div id="myClose" class="slds-col-8-of-12"></div>
+    <div class="slds-col-4-of-12 formUpSert">
+    <div class="demo-only slds-grid" style="float:right;height: 500px; max-width: 420px; background: rgb(244, 246, 249); padding: 4%;">
+    <div class="slds-panel slds-grid slds-grid_vertical slds-nowrap">
+    <div class="slds-form slds-form_stacked slds-grow slds-scrollable_y">
+        <div class="slds-panel__section ">
+        <div class="slds-media">
+            <div class="slds-media__body">
+                <button class="slds-button slds-button_neutral slds-grow">Confirm</button>
+                <button class="slds-button slds-button_neutral slds-grow" onclick="{!c.hideForm}">Close</button>
+            </div>
+        </div>
+        </div>
+        <div class="slds-form-element">
+        <div class="slds-panel__section">
+        <ul>
+        <h1 class="slds-form-element__label">Details</h1>
+            <li class="slds-form-element slds-hint-parent ">
+            <span class="slds-form-element__label">Title</span>
+            <div class="slds-form-element__control">
+                <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text" />
+            </div>
+            </li>
+            <li class="slds-form-element slds-hint-parent ">
+            <span class="slds-form-element__label">Description</span>
+            <div class="slds-form-element__control">
+                <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text" />
+            </div>
+            </li>
+            <li class="slds-form-element slds-hint-parent ">
+            <span class="slds-form-element__label">Preconditions</span>
+            <div class="slds-form-element__control">
+                <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text" />
+            </div>
+            </li>
+            <li class="slds-form-element slds-hint-parent ">
+            <span class="slds-form-element__label">URL</span>
+            <div class="slds-form-element__control">
+                <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text" />
+            </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</div>
+</aura:component>

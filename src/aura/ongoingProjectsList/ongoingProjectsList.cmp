@@ -2,8 +2,12 @@
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
     <aura:handler name="projectDetailsEvent" event="c:projectDetailsEvent" action="{!c.loadDetails}" />
     <aura:handler name="deleteItemEvent" event="c:deleteItemEvent" action="{!c.deleteItem}" />
+    <aura:handler name="ItemUpSert" event="c:ItemUpSert" action="{!c.removeCSS}" />
+    <aura:handler name="hideEvent" event="c:hideEvent" action="{!c.applyCSS}" />
+    <!--***********************************************************************************************-->
     <aura:attribute name="projectongoing" type="Project__c[]" />
     <aura:attribute type="Map" name="selectedProject" />
+    <!--***********************************************************************************************-->
     <div class="slds-grid slds-grid_vertical-align-start">
     <div class="slds-col" >
     <legend id="newform" class="slds-text-heading_large slds-text-align_center">
@@ -20,5 +24,8 @@
         <c:ongoingProjectDetails projectFilterItem="{!v.selectedProject}" />
         </div>
     </aura:if>
+    </div>
+    <div aura:id="myFormUpsert" class="slds-grid slds-grid_vertical-align-start myFormUpsertHide">
+        <c:formUpsert />
     </div>
 </aura:component>

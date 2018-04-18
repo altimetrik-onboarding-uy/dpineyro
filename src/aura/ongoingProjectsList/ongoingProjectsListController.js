@@ -59,6 +59,18 @@
         console.log('## ',JSON.parse(JSON.stringify(myListOfTc)));
         component.set("v.selectedProject.Test_Cases__r", myListOfTc);
         $A.enqueueAction(action);
+    },
+    applyCSS: function(cmp, event) {
+        console.log('yes on fire');
+        var cmpTarget = cmp.find('myFormUpsert');
+        console.log(cmp.find('myFormUpsert'));
+        $A.util.addClass(cmpTarget, 'myFormUpsertHide');
+    },
+    removeCSS: function(cmp, event) {
+        console.log('Arrow Cached');
+        var cmpTargetR = cmp.find('myFormUpsert');
+        console.log(cmp.find('myFormUpsert'));
+        $A.util.removeClass(cmpTargetR, 'myFormUpsertHide');
     }
 
 })

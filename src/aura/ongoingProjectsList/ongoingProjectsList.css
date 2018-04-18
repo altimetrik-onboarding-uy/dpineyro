@@ -1,52 +1,21 @@
-.THIS.myContent{
-   /*  background-color: powderblue; */
-    width: 100%;
-    height: auto;
-    /* width: 900px;
-    height: 1000px; */
-}
-.THIS .myBoxRelative{
-    position: relative;
-    padding-bottom: 2%;
-}
-.THIS .myPanel.boxStatus{
-    margin:2%;
-    display: inline-block;
-    width: 26%;
-    position: absolute;
-    /* position:relative;
-    float:left; */
-}
-.THIS .myPanel.boxDetails{
-    margin:0;
-    display: inline-block;
-    width: 30%;
-    margin-left: 30%;
-    padding-top: 2%;
-    /* position: relative;
-    float: right; */
-}
-.THIS .projectsLists{
-   /*  position:absolute; */
-    width: 100%;
-    max-width: 800px;
-}
-.THIS .cOngoingProjectDetails{
-    /* background-color: powderblue; */
-}
-.THIS .slds-panel__section{
-    width: 100%;
-    margin: 0;
-    padding: 0;
+.THIS.slds-grid.slds-grid_vertical-align-start{
+    background-color: powderblue;
 }
 .THIS ul{
-    width: 100%;
-    margin: 0;
-    padding: 10%;
+    padding: 2%;
 }
-.THIS .myPanel.slds-size_12-of-12.cOngoingProjectsList{
-    position: relative;
+.THIS.myFormUpsertHide{
+    visibility: hidden;
+    
 }
-.THIS .myPanel.slds-size_4-of-12{
-    padding: 2% 4%;
+.THIS .formUpSert{
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    right: 0;
+}
+.THIS#myClose {
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
 }

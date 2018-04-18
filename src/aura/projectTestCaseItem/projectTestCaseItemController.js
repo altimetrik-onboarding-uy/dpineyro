@@ -11,12 +11,12 @@
 	},
 	formUpSert: function(component, event, helper){
 		var arrow = component.get("v.testCaseItem");
-		var send = component.getEvent('ItemUpSert');
-		console.log('##',JSON.parse(JSON.stringify(arrow)));
-		send.setParams({
+		var throwArrow = component.getEvent('ItemUpSert');
+		throwArrow.setParams({
 			"parUpsert": arrow
 		});
-		console.log('fire on the hold');
-		send.fire();
+		console.log('##', JSON.parse(JSON.stringify(arrow)));
+		console.log("Arrow on the Fly");
+		throwArrow.fire();
 	}
 })
