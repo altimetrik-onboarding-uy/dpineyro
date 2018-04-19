@@ -64,4 +64,8 @@ public	with sharing class ProjectOngoing {
             Test_Case__c tes = [SELECT Id,Name,Title__c,nameProject__c,Description__c,Preconditions__c,URL__c FROM Test_Case__c WHERE Test_Case__c.Id = :myId];
             return tes;
     }
+    @AuraEnabled
+    public static void upsertTestCase(Test_Case__c myTC){
+        upsert myTC;
+    }
 }

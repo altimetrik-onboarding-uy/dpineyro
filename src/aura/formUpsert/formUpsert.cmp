@@ -1,51 +1,66 @@
-<aura:component >
+<aura:component  controller="ProjectOngoing">
 <aura:registerEvent name="hideEvent" type="c:hideEvent"/>
-
-<aura:attribute name="dataTestForm" type="Project__c" />
+<aura:registerEvent name="projectDetailsEvent" type="c:projectDetailsEvent"/>
+<aura:attribute name="newTestCase" type="Test_Case__c"  />
+<aura:attribute name="myProject" type="Project__c"  />
     <div id="myClose" class="slds-col-8-of-12"></div>
         <div class="slds-col-4-of-12 formUpSert">
             <div class="demo-only slds-grid" style="float:right;height: 500px; max-width: 420px; background: rgb(244, 246, 249); padding: 4%;">
                 <div class="slds-panel slds-grid slds-grid_vertical slds-nowrap">
                 <div class="slds-form slds-form_stacked slds-grow slds-scrollable_y">
-                    <div class="slds-panel__section ">
-                    <div class="slds-media">
-                        <div class="slds-media__body">
-                            <button class="slds-button slds-button_brand slds-grow">Save</button>
-                            <button class="slds-button slds-button_neutral slds-grow" onclick="{!c.hideForm}">Close</button>
+                     <!-- CREATE NEW TC -->
+                    <div aria-labelledby="newTestCaseform">
+                        <!-- BOXED AREA -->
+                        <div class="slds-clearfix">
+                            <div class="slds-clearfix">
+                                <span   class="slds-m-right--medium slds-float_right"
+                                        style="cursor:pointer;"
+                                        onclick="{!c.hideForm}">
+                                        X
+                                        </span>
+                            </div>
                         </div>
+                        <fieldset class="slds-box slds-theme--default slds-container--small">
+                        <legend id="newTestCaseform" class="slds-text-heading--small 
+                        slds-p-vertical--medium">
+                        Add/Update Test Case
+                        </legend>
+                        <h1>{!v.newTestCase.Id}</h1>
+                        <!-- CREATE NEW TC FORM -->
+                        <form class="slds-form--stacked">        
+                        <!-- <aura:if isTrue="{!v.newTestCase.Id != null}"> -->
+                            <lightning:input aura:id="testcaseform" label="Title"
+                                            type="text"
+                                            name="TCname"
+                                            value="{!v.newTestCase.Title__c}"
+                                            required="false"/> 
+                            <lightning:input aura:id="testcaseform" label="Description"
+                                            type="text"
+                                            name="TCname"
+                                            value="{!v.newTestCase.Description__c}"
+                                            required="false"/> 
+                            <lightning:input aura:id="testcaseform" label="Preconditions"
+                                            type="text"
+                                            name="TCname"
+                                            value="{!v.newTestCase.Preconditions__c}"
+                                            required="false"/> 
+                            <lightning:input aura:id="testcaseform" label="URL"
+                                            type="text"
+                                            name="TCurl"
+                                            value="{!v.newTestCase.URL__c}"
+                                            required="false"/> 
+                            <!-- </aura:if> -->
+                            <lightning:button label="Save" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.saveTc}"/>
+                        </form>
+                        <!-- / CREATE NEW TC FORM -->
+                
+                    </fieldset>
+                    <!-- / BOXED AREA -->
                     </div>
-                    </div>
-                    <div class="slds-form-element">
-                    <div class="slds-panel__section">
-                    <ul>
-                    <h1 class="slds-form-element__label">Details</h1>
-                        <li class="slds-form-element slds-hint-parent">
-                        <span class="slds-form-element__label">Title</span>
-                        <div class="slds-form-element__control">
-                            <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text" value="{!v.dataTestForm.Title__c}"/>
-                        </div>
-                        </li>
-                        <li class="slds-form-element slds-hint-parent ">
-                        <span class="slds-form-element__label">Description</span>
-                        <div class="slds-form-element__control">
-                            <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text" value="{!v.dataTestForm.Description__c}"/>
-                        </div>
-                        </li>
-                        <li class="slds-form-element slds-hint-parent ">
-                        <span class="slds-form-element__label">Preconditions</span>
-                        <div class="slds-form-element__control">
-                            <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text" value="{!v.dataTestForm.Preconditions__c}"/>
-                        </div>
-                        </li>
-                        <li class="slds-form-element slds-hint-parent ">
-                        <span class="slds-form-element__label">URL</span>
-                        <div class="slds-form-element__control">
-                            <input type="text" id="input-unique-id" class="slds-input" placeholder="Placeholder Text" value="{!v.dataTestForm.URL__c}"/>
-                        </div>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
+                    <!-- / CREATE NEW TC -->
             </div>
         </div>
     </div>

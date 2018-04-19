@@ -6,10 +6,16 @@
     <aura:handler name="hideEvent" event="c:hideEvent" action="{!c.applyCSS}" />
     <aura:handler name="ItemUpSert" event="c:ItemUpSert" action="{!c.updateData}" />
     <!--***********************************************************************************************-->
-    <aura:attribute name="dataTest" type="Test_Case__c" />
-    <aura:attribute name="dataTestEty" type="Test_Case__c" />
     <aura:attribute name="projectongoing" type="Project__c[]" />
     <aura:attribute type="Map" name="selectedProject" />
+    <aura:attribute name="dataTest" type="Test_Case__c" default="{ 'sobjectType' : 'Test_Case__c',
+                'Id'                :   null,
+                'Name'              :   '',
+                'Title__c'          :   '',
+                'Description__c'    :   '',
+                'Preconditions__c'  :   '',
+                'URL__c'            :   '',
+                'Status__c'			:	'Ongoing'}"/>
     <!--***********************************************************************************************-->
     <div class="slds-grid slds-grid_vertical-align-start">
     <div class="slds-col" >
@@ -29,6 +35,6 @@
     </aura:if>
     </div>
     <div aura:id="myFormUpsert" class="slds-grid slds-grid_vertical-align-start myFormUpsertHide">
-        <c:formUpsert dataTestForm="{!v.dataTest}" />
+        <c:formUpsert newTestCase="{!v.dataTest}" myProject="{!v.selectedProject}" />
     </div>
 </aura:component>

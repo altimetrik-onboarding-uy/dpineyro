@@ -6,7 +6,6 @@
             "paramDet": actPar
         });
         //console.log('##', JSON.parse(JSON.stringify()));
-        console.log("Fire ");
         cmpAct.fire();
     }
 })
