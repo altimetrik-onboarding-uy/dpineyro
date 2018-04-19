@@ -5,7 +5,6 @@
         cmpAct.setParams({
             "paramDet": actPar
         });
-        //console.log('##', JSON.parse(JSON.stringify()));
         cmpAct.fire();
     }
 })

@@ -1,6 +1,6 @@
 <aura:component >
     <aura:registerEvent name="deleteItemEvent" type="c:deleteItemEvent"/>
-    <aura:registerEvent name="showEvent" type="c:showEvent"/>
+    <aura:registerEvent name="openUpdateForm" type="c:openUpdateForm"/>
     <aura:registerEvent name="ItemUpSert" type="c:ItemUpSert"/>
     <aura:attribute name="testCaseItem" Type="Test_Case__c"/>
 	<article class="slds-card" >
@@ -8,7 +8,7 @@
             <header class="slds-media slds-media_center slds-has-flexi-truncate">
                 <div class="slds-media__body slds-text-align_left">
                     <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
-                        <span class="slds-text-heading_small " onclick="{!c.showForm}">Test Case :<br/> {!v.testCaseItem.Id}</span>
+                        <span class="slds-text-heading_small " onclick="{!c.openUpdateForm}">Test Case :<br/> {!v.testCaseItem.Id}</span>
                     </a>
                 </div>
             </header>

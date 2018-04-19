@@ -1,5 +1,5 @@
-<aura:component  controller="ProjectOngoing">
-<aura:registerEvent name="hideEvent" type="c:hideEvent"/>
+<aura:component controller="ProjectOngoing">
+<aura:registerEvent name="closeUpdateForm" type="c:closeUpdateForm"/>
 <aura:registerEvent name="projectDetailsEvent" type="c:projectDetailsEvent"/>
 <aura:attribute name="newTestCase" type="Test_Case__c"  />
 <aura:attribute name="myProject" type="Project__c"  />
@@ -15,7 +15,7 @@
                             <div class="slds-clearfix">
                                 <span   class="slds-m-right--medium slds-float_right"
                                         style="cursor:pointer;"
-                                        onclick="{!c.hideForm}">
+                                        onclick="{!c.closeUpdateForm}">
                                         X
                                         </span>
                             </div>

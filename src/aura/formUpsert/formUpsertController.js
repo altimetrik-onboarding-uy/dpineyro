@@ -1,6 +1,6 @@
 ({
-	hideForm: function(component,event,helper){
-		var throwArrow = component.getEvent('hideEvent');
+	closeUpdateForm: function(component,event,helper){
+		var throwArrow = component.getEvent('closeUpdateForm');
 		throwArrow.fire();
 	},
 	saveTc: function(component,event,helper){
@@ -8,7 +8,6 @@
 		var obj = component.get("v.newTestCase");
 		obj.nameProject__c=component.get("v.myProject.Id");
 		obj.Status__c='Ongoing';
-		console.log('##',JSON.parse(JSON.stringify(obj)));
 		/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 		var action = component.get("c.upsertTestCase");
         action.setParams({
@@ -33,7 +32,7 @@
         /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 		$A.enqueueAction(action);
 		/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-		var throwArrow = component.getEvent('hideEvent');
+		var throwArrow = component.getEvent('closeUpdateForm');
 		throwArrow.fire();
 		/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 		var completeProc = component.get("v.myProject");
