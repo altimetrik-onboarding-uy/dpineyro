@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
+        <members>*</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ItemUpSert</members>
+        <members>Project</members>
+        <members>closeUpdateForm</members>
+        <members>deleteItemEvent</members>
+        <members>formUpsert</members>
+        <members>hideEvent</members>
+        <members>ongoingProjectDetails</members>
+        <members>ongoingProjectItem</members>
+        <members>ongoingProjects</members>
+        <members>ongoingProjectsList</members>
+        <members>openUpdateForm</members>
+        <members>projectDetailsEvent</members>
+        <members>projectTestCaseItem</members>
+        <members>projectTestCaseList</members>
+        <members>showEvent</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
         <members>Contact</members>
         <members>Project__c</members>
         <members>Test_Case__c</members>

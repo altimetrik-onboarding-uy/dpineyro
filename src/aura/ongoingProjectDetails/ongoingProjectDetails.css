@@ -1,0 +1,12 @@
+.THIS .myPanel.slds-col.slds-size_6-of-12.cOngoingProjectDetails {
+    display: inline-block;
+    width: 100%;
+}
+.THIS .myPanel.slds-col.slds-size_6-of-12 {
+    display: inline-block;
+    margin: 0;
+    background-color: red !important;    
+}
+.THIS .slds-form-element.slds-hint-parent.slds-border_bottom {
+    border-bottom: 1px solid black;
+}

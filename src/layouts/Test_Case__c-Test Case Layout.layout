@@ -27,7 +27,7 @@
                 <field>URL__c</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>nameProject__c</field>
             </layoutItems>
         </layoutColumns>

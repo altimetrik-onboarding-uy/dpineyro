@@ -1,0 +1,21 @@
+<aura:component controller="ProjectOngoing">
+    <aura:registerEvent name="openUpdateForm" type="c:openUpdateForm"/>
+    <aura:registerEvent name="ItemUpSert" type="c:ItemUpSert"/>
+    <aura:attribute name="testCaseList" Type="Test_Case__c[]" />
+      <aura:attribute name="dataTest" type="Test_Case__c" default="{ 'sobjectType' : 'Test_Case__c',
+                'Id'                :   null,
+                'Name'              :   '',
+                'Title__c'          :   '',
+                'Description__c'    :   '',
+                'Preconditions__c'  :   '',
+                'URL__c'            :   '',
+                'Status__c'			:	'Ongoing'}"/>
+	<ul>
+        <button type="button" class="slds-button slds-button_brand slds-m-vertical_large" onclick="{!c.openUpdateForm}">New</button>
+        <aura:if isTrue="{!v.testCaseList != null}" >
+        <aura:iteration items="{!v.testCaseList}" var="itm">
+            <c:projectTestCaseItem testCaseItem="{!itm}"/>
+        </aura:iteration>
+        </aura:if>
+    </ul>
+</aura:component>
