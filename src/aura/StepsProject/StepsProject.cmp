@@ -1,6 +1,14 @@
-<aura:component >
+<aura:component implements="flexipage:availableForRecordHome, force:hasRecordId">
 	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
-    <aura:attribute name="vector" type="List" />
-    <aura:handler name="changeStepList" event="c:changeStepList" action="{!c.onChargeVector}" />
-    <c:ListContainerDaD vector="{!v.vector}" />
+    <aura:attribute name="stepList" type="List" />
+    <aura:handler name="changeStepList" event="c:changeStepList" action="{!c.onChargeStepList}" />
+
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="simpleRecord" type="Object" />
+     <force:recordData recordId="{!v.recordId}"
+          targetRecord ="{!v.record}"
+          targetFields ="{!v.simpleRecord}"
+          fields="Id, Name"/>
+    <c:ListContainerDaD stepList="{!v.stepList}" />
 </aura:component>

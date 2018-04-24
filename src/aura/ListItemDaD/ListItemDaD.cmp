@@ -1,9 +1,9 @@
-<aura:component >
+<aura:component  >
     <aura:registerEvent name="changeStepIndex" type="c:changeStepIndex" />
     <aura:registerEvent name="changeStepList" type="c:changeStepList" />
     <aura:attribute name="item" type="Object" />
     <aura:attribute name="itemDrag" type="Object" />
-    <aura:attribute name="vector" type="List" />
+    <aura:attribute name="stepList" type="List" />
     <div ondrop="{!c.onDrop}" ondragover='{!c.allowDrop}'>
         <div draggable='true' ondragstart='{!c.onDragStart}'>
             <div class='item'>

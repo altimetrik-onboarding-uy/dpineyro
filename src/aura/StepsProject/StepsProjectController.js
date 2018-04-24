@@ -1,6 +1,5 @@
 ({
 	doInit : function(component, event, helper) {
-        console.log('start');
         var obj = [
             {
                 Id 	: 0,
@@ -21,10 +20,10 @@
                 age : "age"
             }
         ];
-        component.set("v.vector", obj);
+        component.set("v.stepList", obj);
 	},
-    onChargeVector : function(component,event,helper){
-        var a = event.getParam("parList");
-        component.set("v.vector",a);
+    onChargeStepList : function(component,event,helper){
+        var parList = event.getParam("parList");
+        component.set("v.stepList",parList);
         }
 })
