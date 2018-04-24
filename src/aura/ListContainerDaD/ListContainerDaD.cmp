@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:handler name="changeStepIndex" event="c:changeStepIndex" action="{!c.onDrag}" />
+    <aura:attribute name="vector" type="List" />
+    <aura:attribute name="itemDrag" type="Object" />
+    <ul>
+        <aura:iteration items="{!v.vector}" var="item">
+        	<li><c:ListItemDaD item='{!item}' itemDrag='{!v.itemDrag}' vector="{!v.vector}" /></li>
+        </aura:iteration>
+    </ul>
+</aura:component>

@@ -1,0 +1,6 @@
+<aura:component >
+	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:attribute name="vector" type="List" />
+    <aura:handler name="changeStepList" event="c:changeStepList" action="{!c.onChargeVector}" />
+    <c:ListContainerDaD vector="{!v.vector}" />
+</aura:component>

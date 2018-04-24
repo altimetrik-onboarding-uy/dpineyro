@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:registerEvent name="changeStepIndex" type="c:changeStepIndex" />
+    <aura:registerEvent name="changeStepList" type="c:changeStepList" />
+    <aura:attribute name="item" type="Object" />
+    <aura:attribute name="itemDrag" type="Object" />
+    <aura:attribute name="vector" type="List" />
+    <div ondrop="{!c.onDrop}" ondragover='{!c.allowDrop}' style='background-color:red; margin:10% auto; width:20%;'>
+        <div class='card' draggable='true' ondragstart='{!c.onDragStart}'>
+            <div class='item'>
+                <p>{!v.item.Id}</p>
+                <p>{!v.item.name}</p>
+            </div>
+        </div>
+    </div>
+</aura:component>
