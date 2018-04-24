@@ -1,26 +1,22 @@
 ({
 	doInit : function(component, event, helper) {
-        var obj = [
-            {
-                Id 	: 0,
-                name : "name 1",
-                lastname : "lastname",
-                age : "age"
-            },
-            {
-                Id 	: 1,
-                name : "name 2",
-                lastname : "lastname",
-                age : "age"
-            },
-            {
-                Id 	: 2,
-                name : "name 3",
-                lastname : "lastname",
-                age : "age"
+        var recId = component.get('v.recordId');
+        console.log(recId);
+        var stepList = component.get("c.listStepCases");
+        stepList.setParams({
+            'myId' : recId
+        });
+        stepList.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                component.set("v.stepList", response.getReturnValue());
             }
-        ];
-        component.set("v.stepList", obj);
+            else {
+                console.log("Failed with state: " + state);
+            }
+        });
+        $A.enqueueAction(stepList);
+        console.log('## ',JSON.parse(JSON.stringify(stepList)));
 	},
     onChargeStepList : function(component,event,helper){
         var parList = event.getParam("parList");

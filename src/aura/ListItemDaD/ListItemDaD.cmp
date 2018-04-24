@@ -4,12 +4,30 @@
     <aura:attribute name="item" type="Object" />
     <aura:attribute name="itemDrag" type="Object" />
     <aura:attribute name="stepList" type="List" />
-    <div ondrop="{!c.onDrop}" ondragover='{!c.allowDrop}'>
+    <div class="slds-form-element" ondrop="{!c.onDrop}" ondragover='{!c.allowDrop}'>
         <div draggable='true' ondragstart='{!c.onDragStart}'>
             <div class='item'>
-                <span aria-hidden="true" class="slds-text-heading_medium slds-p-right_xx-small">⋮</span>
-                <span>{!v.item.Id}</span>
-                <span>{!v.item.name}</span>
+                <div class="slds-col">
+                    <span aria-hidden="true" class="slds-text-heading_medium slds-p-right_xx-small">⋮</span>
+                </div>
+                <div class="slds-col">
+                <label class="title">Name</label>
+                <div class="">
+                    {!v.item.Name}
+                </div>
+                </div>
+                <div class="slds-col">
+                    <label class="title">Description</label>
+                        <div class="">
+                           {!v.item.Description__c}
+                        </div>
+                    </div>
+                <div class="slds-col">
+                <label class="title">Expected Result</label>
+                <div class="">
+                    {!v.item.expected_result__c}
+                </div>
+                </div>
             </div>
         </div>
     </div>

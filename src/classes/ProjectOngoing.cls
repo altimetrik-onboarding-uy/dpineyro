@@ -43,4 +43,12 @@ public	with sharing class ProjectOngoing {
     public static void upsertTestCase(Test_Case__c myTC){
         upsert myTC;
     }
+    @AuraEnabled
+    public static List<Test_Case_Step__c> listStepCases(String myId){
+        List<Test_Case_Step__c> myListSteps =    [SELECT Name,Description__c,expected_result__c
+                                                FROM Test_Case_Step__c
+                                                WHERE Test_Case__r.Id = :myId 
+                                                ORDER BY Order__c , LastModifiedDate];
+        return myListSteps;
+    }
 }

@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForRecordHome, force:hasRecordId">
+<aura:component controller="ProjectOngoing" implements="flexipage:availableForRecordHome, force:hasRecordId">
 	<aura:handler name="init" action="{!c.doInit}" value="{!this}" />
     <aura:attribute name="stepList" type="List" />
     <aura:handler name="changeStepList" event="c:changeStepList" action="{!c.onChargeStepList}" />
