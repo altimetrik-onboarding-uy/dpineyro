@@ -1,7 +1,6 @@
 ({
 	doInit : function(component, event, helper) {
         var recId = component.get('v.recordId');
-        console.log(recId);
         var stepList = component.get("c.listStepCases");
         stepList.setParams({
             'myId' : recId
@@ -16,7 +15,6 @@
             }
         });
         $A.enqueueAction(stepList);
-        console.log('## ',JSON.parse(JSON.stringify(stepList)));
 	},
     onChargeStepList : function(component,event,helper){
         var parList = event.getParam("parList");

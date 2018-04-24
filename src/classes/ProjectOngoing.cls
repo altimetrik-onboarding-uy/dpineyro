@@ -45,10 +45,14 @@ public	with sharing class ProjectOngoing {
     }
     @AuraEnabled
     public static List<Test_Case_Step__c> listStepCases(String myId){
-        List<Test_Case_Step__c> myListSteps =    [SELECT Name,Description__c,expected_result__c
+        List<Test_Case_Step__c> myListSteps =    [SELECT Id,Name,Description__c,expected_result__c,Order__c
                                                 FROM Test_Case_Step__c
                                                 WHERE Test_Case__r.Id = :myId 
-                                                ORDER BY Order__c , LastModifiedDate];
+                                                ORDER BY Order__c ASC, LastModifiedDate DESC];
         return myListSteps;
+    }
+    @AuraEnabled
+    public static void updateOrder(Test_Case_Step__c myTCS){
+        update myTCS;
     }
 }
