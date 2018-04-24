@@ -2,9 +2,15 @@
     <aura:handler name="changeStepIndex" event="c:changeStepIndex" action="{!c.onDrag}" />
     <aura:attribute name="vector" type="List" />
     <aura:attribute name="itemDrag" type="Object" />
-    <ul>
-        <aura:iteration items="{!v.vector}" var="item">
-        	<li><c:ListItemDaD item='{!item}' itemDrag='{!v.itemDrag}' vector="{!v.vector}" /></li>
-        </aura:iteration>
-    </ul>
+    <div class="site-a11y-component">
+        
+            <aura:iteration items="{!v.vector}" var="item">
+            <div>
+                <div class="box-dad slds-p-around_medium">
+                    <c:ListItemDaD item='{!item}' itemDrag='{!v.itemDrag}' vector="{!v.vector}" />
+                </div>
+            </div>
+            </aura:iteration>
+        
+    </div>
 </aura:component>

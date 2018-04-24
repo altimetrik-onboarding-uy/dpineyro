@@ -12,16 +12,17 @@
 	},
     onDrop	:	function(component,event,helper){
         event.preventDefault();
-        var lst = component.get('v.vector');
-        var j = component.get("v.itemDrag");
-        var i = component.get("v.item");
+        var listSteps = component.get('v.vector');
+        var itemDrag = component.get("v.itemDrag");
+        var itemDrop = component.get("v.item");
         var vectorRes =[];
-        var a = 0;
-        var b = 0;
-        a = helper.findIdx(i,lst);
-        b = helper.findIdx(j,lst);
-       	vectorRes = helper.reOrder(a,b,i,j,lst);
+        var itemDragIndex = 0;
+        var itemDropIndex = 0;
+        itemDropIndex = helper.findIdx(itemDrop,listSteps);
+        itemDragIndex = helper.findIdx(itemDrag,listSteps);
+       	vectorRes = helper.reOrder(itemDropIndex,itemDragIndex,itemDrop,itemDrag,listSteps);
         var throwList = component.getEvent("changeStepList");
+        console.log(' itemDrag = '+itemDrag.Id+' / '+' itemDrop = '+itemDrop.Id+' / itemDragIndex ='+itemDragIndex+' / itemDropIndex = '+itemDropIndex);
         throwList.setParams({
             "parList": vectorRes
         });
