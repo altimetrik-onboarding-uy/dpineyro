@@ -18,6 +18,7 @@
         var stepListRes =[];
         var itemDragIndex = 0;
         var itemDropIndex = 0;
+        var orderNumber = 0;
         itemDropIndex = helper.findIdx(itemDrop,stepList);
         itemDragIndex = helper.findIdx(itemDrag,stepList);
         stepListRes = helper.reOrder(itemDropIndex,itemDragIndex,itemDrop,itemDrag,stepList);
@@ -26,10 +27,26 @@
             "parList": stepListRes
         });
         throwList.fire();
+        if((itemDropIndex + 1) >= stepList.length){
+            console.log('Value of Drop'+(stepList[itemDropIndex].Order__c));
+            orderNumber = (stepList[itemDropIndex-1].Order__c+1);
+            console.log('Value of Order Number '+orderNumber);
+        }
+        else{
+            if(itemDropIndex-1 < 0){
+                console.log((stepList[itemDropIndex-1].Order__c + 1));
+                orderNumber = (stepList[itemDropIndex+1].Order__c - 1);
+            }else{
+                if(itemDragIndex > itemDropIndex){
+                    orderNumber = ((stepList[itemDropIndex-1].Order__c+stepList[itemDropIndex].Order__c)/2);
+                }
+                if(itemDragIndex < itemDropIndex){
+                        orderNumber = ((stepList[itemDropIndex+1].Order__c+stepList[itemDropIndex].Order__c)/2);
+                }
+            }
+        }
         var action = component.get("c.updateOrder");
-        console.log('Drop '+itemDrop.Order__c);
-        itemDrag.Order__c = itemDrop.Order__c+(1%itemDrop.Order__c);
-        console.log('Drag '+itemDrag.Order__c);
+        itemDrag.Order__c = orderNumber;
         action.setParams({
             "myTCS" : itemDrag
         });
@@ -43,6 +60,12 @@
             }
         });
         $A.enqueueAction(action);
+        var throwarrow = component.getEvent("updateStepList");
+        var arrow = component.get("v.stepList");
+        throwarrow.setParams({
+            "parListUpdate": arrow
+        });
+        throwarrow.fire();
     },
     allowDrop : function(component,event,helper){
         event.preventDefault();

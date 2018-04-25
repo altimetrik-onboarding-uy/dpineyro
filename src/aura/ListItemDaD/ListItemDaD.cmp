@@ -1,6 +1,7 @@
-<aura:component  controller="ProjectOngoing">
+<aura:component controller="ProjectOngoing">
     <aura:registerEvent name="changeStepIndex" type="c:changeStepIndex" />
     <aura:registerEvent name="changeStepList" type="c:changeStepList" />
+    <aura:registerEvent name="updateStepList" type="c:updateStepList" />
     <aura:attribute name="item" type="Object" />
     <aura:attribute name="itemDrag" type="Object" />
     <aura:attribute name="stepList" type="List" />
@@ -12,7 +13,6 @@
                 </div>
                 <div class="slds-col">
                 <label class="title">Name</label>
-                {!v.item.Order__c}
                 <div class="">
                     {!v.item.Name}
                 </div>

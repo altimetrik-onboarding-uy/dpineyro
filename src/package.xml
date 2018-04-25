@@ -16,7 +16,6 @@
         <members>closeUpdateForm</members>
         <members>deleteItemEvent</members>
         <members>formUpsert</members>
-        <members>hideEvent</members>
         <members>ongoingProjectDetails</members>
         <members>ongoingProjectItem</members>
         <members>ongoingProjects</members>
@@ -25,7 +24,7 @@
         <members>projectDetailsEvent</members>
         <members>projectTestCaseItem</members>
         <members>projectTestCaseList</members>
-        <members>showEvent</members>
+        <members>updateStepList</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
