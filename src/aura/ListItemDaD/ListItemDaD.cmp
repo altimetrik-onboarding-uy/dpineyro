@@ -11,9 +11,9 @@
                 <div class="slds-col">
                     <span aria-hidden="true" class="slds-text-heading_medium slds-p-right_xx-small">⋮</span>
                 </div>
-                <div class="slds-col">
+                <div class="slds-col edit-btn" onclick="{!c.editRecord }">
                 <label class="title">Name</label>
-                <div class="">
+                <div class="" >
                     {!v.item.Name}
                 </div>
                 </div>

@@ -3,6 +3,7 @@
     <aura:attribute name="stepList" type="List" />
     <aura:attribute name="itemDrag" type="Object" />
     <div class="site-a11y-component">
+    <lightning:button label="New" onclick="{!c.createRecord }" /> 
         <aura:iteration items="{!v.stepList}" var="item">
         <div>
             <div class="box-dad slds-p-around_medium">

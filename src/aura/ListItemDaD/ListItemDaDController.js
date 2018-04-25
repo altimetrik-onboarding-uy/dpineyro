@@ -33,9 +33,8 @@
             console.log('Value of Order Number '+orderNumber);
         }
         else{
-            if(itemDropIndex-1 < 0){
-                console.log((stepList[itemDropIndex-1].Order__c + 1));
-                orderNumber = (stepList[itemDropIndex+1].Order__c - 1);
+            if((itemDropIndex-1) < 0){
+                orderNumber = (stepList[1].Order__c - 1);
             }else{
                 if(itemDragIndex > itemDropIndex){
                     orderNumber = ((stepList[itemDropIndex-1].Order__c+stepList[itemDropIndex].Order__c)/2);
@@ -45,6 +44,7 @@
                 }
             }
         }
+        console.log(orderNumber);
         var action = component.get("c.updateOrder");
         itemDrag.Order__c = orderNumber;
         action.setParams({
@@ -69,5 +69,12 @@
     },
     allowDrop : function(component,event,helper){
         event.preventDefault();
+    },
+    editRecord : function(component, event, helper) {
+        var editRecordEvent = $A.get("e.force:editRecord");
+        editRecordEvent.setParams({
+             "recordId": component.get("v.item.Id")
+        });
+        editRecordEvent.fire();
     }
 })
