@@ -10,7 +10,6 @@
         <members>ListItemDaD</members>
         <members>Project</members>
         <members>StepsProject</members>
-        <members>TestApp</members>
         <members>changeStepIndex</members>
         <members>changeStepList</members>
         <members>closeUpdateForm</members>
