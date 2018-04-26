@@ -5,6 +5,10 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
         <members>ItemUpSert</members>
         <members>ListContainerDaD</members>
         <members>ListItemDaD</members>

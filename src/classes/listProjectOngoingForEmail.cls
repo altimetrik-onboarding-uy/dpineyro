@@ -24,8 +24,8 @@ global class listProjectOngoingForEmail implements Database.Batchable<SObject> ,
     }    
     global void finish(Database.BatchableContext bc){
          System.debug(recProcessed + ' records processed.');
-        EmailManager.sendMail('dpineyro@altimetrik.com','Work Items Overdue','Amount of Work Items Overdue: '+recProcessed+body);
+        EmailManager.sendMail('dpineyro@altimetrik.com','Projects of Day','Projects: '+recProcessed+body);
         emailLimit = Limits.getEmailInvocations();
-        System.debug('Email Invocations Batch:' +emailLimit);
+        System.debug('Email Invocations Batch: ' +emailLimit);
     }   
 }
