@@ -14,5 +14,4 @@ trigger ChangeStateNotification on Project__c (after update) {
             }
         }
     }
-    
 }

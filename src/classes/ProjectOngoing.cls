@@ -5,10 +5,9 @@ public	with sharing class ProjectOngoing {
         System.debug(ret);
         return ret;
     }
-    // blah
     @AuraEnabled
     public static Project__c getProjectOngoingDetails(String myId){
-        Project__c ret = [SELECT Project__c.Id, Project__c.Title__c, Project__c.Name, Project__c.Owner__c, Project__c.Status__c,
+         return  [SELECT Project__c.Id, Project__c.Title__c, Project__c.Name, Project__c.Owner__c, Project__c.Status__c,
                               (
                                 SELECT Test_Case__c.Id,
                                 Test_Case__c.Title__c,
@@ -20,24 +19,17 @@ public	with sharing class ProjectOngoing {
                             FROM Project__c
                             WHERE Project__c.Id = :myId
                             ];
-        System.debug(ret);
-        return ret;
     }
 
     @AuraEnabled 
     public static void deleteTest(String myId){
-        try{
             Test_Case__c tes = [SELECT Id FROM Test_Case__c WHERE Test_Case__c.Id = :myId];
             delete tes;
-        }
-        catch(DMLException e){
-            System.debug('A DML Exception has ocurred : ' + e.getMessage());
-        }
     }
      @AuraEnabled 
     public static Test_Case__c getTest(String myId){
-            Test_Case__c tes = [SELECT Id,Name,Title__c,nameProject__c,Description__c,Preconditions__c,URL__c FROM Test_Case__c WHERE Test_Case__c.Id = :myId];
-            return tes;
+            return [SELECT Id,Name,Title__c,nameProject__c,Description__c,Preconditions__c,URL__c FROM Test_Case__c WHERE Test_Case__c.Id = :myId];
+            
     }
     @AuraEnabled
     public static void upsertTestCase(Test_Case__c myTC){
@@ -45,11 +37,10 @@ public	with sharing class ProjectOngoing {
     }
     @AuraEnabled
     public static List<Test_Case_Step__c> listStepCases(String myId){
-        List<Test_Case_Step__c> myListSteps =    [SELECT Id,Name,Description__c,expected_result__c,Order__c
+        return   [SELECT Id,Name,Description__c,expected_result__c,Order__c
                                                 FROM Test_Case_Step__c
                                                 WHERE Test_Case__r.Id = :myId 
                                                 ORDER BY Order__c ASC, LastModifiedDate DESC];
-        return myListSteps;
     }
     @AuraEnabled
     public static void updateOrder(Test_Case_Step__c myTCS){
