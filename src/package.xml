@@ -5,12 +5,20 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>*</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
         <members>ItemUpSert</members>
+        <members>ListContainerDaD</members>
+        <members>ListItemDaD</members>
         <members>Project</members>
+        <members>StepsProject</members>
+        <members>changeStepIndex</members>
+        <members>changeStepList</members>
         <members>closeUpdateForm</members>
         <members>deleteItemEvent</members>
         <members>formUpsert</members>
-        <members>hideEvent</members>
         <members>ongoingProjectDetails</members>
         <members>ongoingProjectItem</members>
         <members>ongoingProjects</members>
@@ -19,7 +27,7 @@
         <members>projectDetailsEvent</members>
         <members>projectTestCaseItem</members>
         <members>projectTestCaseList</members>
-        <members>showEvent</members>
+        <members>updateStepList</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>

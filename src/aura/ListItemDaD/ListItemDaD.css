@@ -1,0 +1,19 @@
+.THIS .item{
+    width:200px;
+    height: 50px;
+}
+.THIS .slds-col{
+    margin: 0 5%;
+    display: inline-block;
+}
+.THIS .item{
+    margin: 0;
+    width: 100%;
+}
+.THIS .title{
+    font-size: 14px;
+    color: black;
+}
+.THIS .edit-btn{
+    cursor: pointer;
+}
