@@ -1,5 +1,6 @@
 ({
 	closeUpdateForm: function(component,event,helper){
+		helper.clearForm(component);
 		var throwArrow = component.getEvent('closeUpdateForm');
 		throwArrow.fire();
 	},
@@ -16,14 +17,7 @@
         action.setCallback(this, function(response) {
 			var state = response.getState();
             if (state === "SUCCESS") {
-				var refreshObj = obj;
-				refreshObj.Name='';
-				refreshObj.Title__c='';
-				refreshObj.Description__c='';
-				refreshObj.Preconditions__c='';
-				refreshObj.Id=null;
-				refreshObj.URL__c='';
-                component.set("v.newTestCase", refreshObj);
+				helper.clearForm(component);
             }
             else {
                 console.log("Failed with state: " + state);

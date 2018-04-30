@@ -5,7 +5,7 @@
         var updateForm = component.getEvent("ItemUpSert");
 		updateForm.setParams({
 			"parUpsert": component.get("v.dataTest") 
-		});
+        });
 		updateForm.fire();
     }
 })

@@ -25,7 +25,7 @@
                         slds-p-vertical--medium">
                         Add/Update Test Case
                         </legend>
-                        <h1>{!v.newTestCase.Id}</h1>
+                        <h1>Name : {!v.newTestCase.Name}</h1>
                         <!-- CREATE NEW TC FORM -->
                         <form class="slds-form--stacked">        
                         <!-- <aura:if isTrue="{!v.newTestCase.Id != null}"> -->
