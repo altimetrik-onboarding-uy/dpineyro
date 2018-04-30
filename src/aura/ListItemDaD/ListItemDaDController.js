@@ -1,9 +1,9 @@
 ({
 	onDragStart : function(component, event, helper) {
-        helper.onDragStart(component);
+        helper.onDragStart(component,event,helper);
 	},
     onDrop	:	function(component,event,helper){
-       helper.onDrop(component,event);
+       helper.onDrop(component,event,helper);
     },
     allowDrop : function(component,event,helper){
         event.preventDefault();
