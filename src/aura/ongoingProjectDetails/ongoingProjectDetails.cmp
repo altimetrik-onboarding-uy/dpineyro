@@ -5,7 +5,7 @@
                         <div class="slds-col">
                         <h2 class="slds-text-heading_large slds-text-align_center">{!v.projectFilterItem.Name}</h2>
                             <ul>
-                              <h1 class="slds-text-heading_small slds-m-bottom_medium">Details of Project</h1>
+                              <h1 class="slds-text-heading_small slds-m-bottom_medium">Project details</h1>
                                 <li class="slds-form-element slds-hint-parent slds-border_bottom">
                                 <span class="slds-form-element__label">Id</span>
                                 <div class="slds-form-element__control">
